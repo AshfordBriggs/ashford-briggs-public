@@ -1,6 +1,6 @@
 /**
  * Ashford & Briggs - Main JavaScript
- * Minimal, tasteful interactions for enhanced user experience
+ * Paladin Veritai Agent — Product Site
  */
 
 (function() {
@@ -79,35 +79,17 @@
                 company: document.getElementById('company').value,
                 email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
-                service: document.getElementById('service').value,
+                role: document.getElementById('role').value,
+                teamSize: document.getElementById('teamSize').value,
                 message: document.getElementById('message').value
             };
 
             // Here you would normally send the data to your server
             // For now, we'll show a success message
-            showFormMessage('success', 'Thank you for your inquiry! We\'ll be in touch within 24 hours.');
+            showFormMessage('success', 'Thank you for your interest! We\'ll reach out to schedule your demo within one business day.');
 
             // Reset form
             contactForm.reset();
-
-            // In production, you would do something like:
-            /*
-            fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            })
-            .then(response => response.json())
-            .then(data => {
-                showFormMessage('success', 'Thank you for your inquiry! We\'ll be in touch within 24 hours.');
-                contactForm.reset();
-            })
-            .catch(error => {
-                showFormMessage('error', 'There was an error submitting your form. Please try again or contact us directly.');
-            });
-            */
         });
     }
 
@@ -192,21 +174,33 @@
 
     // Observe elements for animation
     const animatedElements = document.querySelectorAll(
-        '.service-card, .process-step, .value-item, .stat'
+        '.stat-card, .solution-card, .step-card, .advantage-card, .team-card, .service-card, .market-stat, .callout-item'
     );
 
     animatedElements.forEach(el => observer.observe(el));
 
-    // Add stagger effect to service cards
-    const serviceCards = document.querySelectorAll('.service-card');
-    serviceCards.forEach((card, index) => {
+    // Add stagger effect to stat cards
+    const statCards = document.querySelectorAll('.stat-card');
+    statCards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.1}s`;
     });
 
-    // Add stagger effect to process steps
-    const processSteps = document.querySelectorAll('.process-step');
-    processSteps.forEach((step, index) => {
-        step.style.animationDelay = `${index * 0.1}s`;
+    // Add stagger effect to solution cards
+    const solutionCards = document.querySelectorAll('.solution-card');
+    solutionCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+    });
+
+    // Add stagger effect to step cards
+    const stepCards = document.querySelectorAll('.step-card');
+    stepCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.15}s`;
+    });
+
+    // Add stagger effect to advantage cards
+    const advantageCards = document.querySelectorAll('.advantage-card');
+    advantageCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
     });
 
     // Keyboard accessibility - trap focus in mobile menu when open
@@ -263,6 +257,6 @@
 
     // Console message for developers
     console.log('%cAshford & Briggs', 'font-size: 20px; font-weight: bold; color: #1a365d;');
-    console.log('%cAligning exceptional people with exceptional companies', 'font-size: 14px; color: #64748b;');
+    console.log('%cPaladin Veritai Agent — Real-Time AI for Recruiting', 'font-size: 14px; color: #64748b;');
 
 })();
