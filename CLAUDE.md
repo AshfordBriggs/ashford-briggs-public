@@ -1,6 +1,6 @@
 # Ashford & Briggs Public Website
 
-Product marketing site for **Paladin Veritai Agent** — a real-time AI intelligence platform for recruiting calls.
+Product marketing site for **Paladin Veritai** — a real-time AI intelligence platform for recruiting calls.
 
 - **Domain:** ashfordbriggs.com
 - **Stack:** Apache serving static HTML/CSS/JS (no build step)
